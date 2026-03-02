@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Academic Performance Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style type="text/tailwindcss">
+        :root {
+            --primary-color: #4f46e5;
+            --bg-soft: #f8fafc;
+            --card-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+        }
+        body {
+            font-family: 'Lexend', sans-serif;
+            background-color: var(--bg-soft);
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4f46e5",
+                        "accent-blue": "#e0f2fe",
+                        "accent-red": "#fef2f2",
+                        "accent-orange": "#fff7ed",
+                        "accent-green": "#f0fdf4",
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="text-slate-800 antialiased">
+   
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+          
+            <div class="flex flex-wrap gap-3">
+                <div class="flex flex-col gap-1">
+                    <label class="text-[10px] font-bold text-slate-400 uppercase ml-1">Carrera</label>
+                    <select
+                        class="form-select text-sm border-slate-200 rounded-lg bg-white focus:ring-primary focus:border-primary min-w-[180px]">
+                        <option>Todas las Carreras</option>
+                        <option>Ingeniería Industrial</option>
+                        <option>Ingeniería Civil</option>
+                        <option>Ingeniería Mecánica</option>
+                        <option>Ingeniería en Computación</option>
+                    </select>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <label class="text-[10px] font-bold text-slate-400 uppercase ml-1">Año</label>
+                    <select
+                        class="form-select text-sm border-slate-200 rounded-lg bg-white focus:ring-primary focus:border-primary min-w-[100px]">
+                        <option>2024</option>
+                        <option>2023</option>
+                        <option>2022</option>
+                    </select>
+                </div>
+                <button
+                    class="self-end px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition-colors shadow-sm flex items-center gap-2">
+                    <span class="material-symbols-outlined text-lg">download</span>
+                    Export Data
+                </button>
+                <button
+                    class="self-end px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 transition-colors shadow-sm flex items-center gap-2">
+                    <span class="material-symbols-outlined text-lg">download</span>
+                    Import Data
+                </button>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-slate-500 text-sm font-medium">Average Grade</p>
+                        <h3 class="text-3xl font-bold text-slate-900 mt-1">8.14</h3>
+                    </div>
+                    <div class="p-3 rounded-lg bg-accent-blue text-blue-600">
+                        <span class="material-symbols-outlined">grade</span>
+                    </div>
+                </div>
+                <div class="mt-4 flex items-center gap-2 text-green-600 text-xs font-bold">
+                    <span class="material-symbols-outlined text-sm">trending_up</span>
+                    <span>+0.12 vs last semester</span>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-slate-500 text-sm font-medium">Fail Rate</p>
+                        <h3 class="text-3xl font-bold text-slate-900 mt-1">13.6%</h3>
+                    </div>
+                    <div class="p-3 rounded-lg bg-accent-red text-red-600">
+                        <span class="material-symbols-outlined">assignment_late</span>
+                    </div>
+                </div>
+                <div class="mt-4 flex items-center gap-2 text-slate-500 text-xs">
+                    <span class="font-bold text-red-500">Highest:</span>
+                    <span>Estadística (32%)</span>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <p class="text-slate-500 text-sm font-medium">At-Risk Count</p>
+                        <h3 class="text-3xl font-bold text-slate-900 mt-1">05</h3>
+                    </div>
+                    <div class="p-3 rounded-lg bg-accent-orange text-orange-600">
+                        <span class="material-symbols-outlined">warning</span>
+                    </div>
+                </div>
+                <div class="mt-4 flex items-center gap-2 text-orange-600 text-xs font-bold">
+                    <span class="material-symbols-outlined text-sm">group</span>
+                    <span>Grades below 6.0</span>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <h4 class="font-bold text-slate-900 mb-6 flex items-center gap-2">
+                    Materias con mayor reprobación
+                    <span class="text-xs font-normal text-slate-400">(Tasa %)</span>
+                </h4>
+                <div class="space-y-6">
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-xs font-medium">
+                            <span class="text-slate-600">Estadística</span>
+                            <span class="text-slate-900">32%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+                            <div class="bg-red-400 h-full rounded-full" style="width: 32%"></div>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-xs font-medium">
+                            <span class="text-slate-600">Programación</span>
+                            <span class="text-slate-900">28%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+                            <div class="bg-red-400 h-full rounded-full" style="width: 28%"></div>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-xs font-medium">
+                            <span class="text-slate-600">Algoritmos</span>
+                            <span class="text-slate-900">22%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+                            <div class="bg-orange-400 h-full rounded-full" style="width: 22%"></div>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-xs font-medium">
+                            <span class="text-slate-600">Cálculo Diferencial</span>
+                            <span class="text-slate-900">18%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+                            <div class="bg-orange-400 h-full rounded-full" style="width: 18%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <div class="flex justify-between items-center mb-6">
+                    <h4 class="font-bold text-slate-900">Tendencia por Semestre</h4>
+                    <div class="flex items-center gap-1.5 text-xs text-slate-500 font-medium">
+                        <span class="size-2.5 bg-primary rounded-full"></span>
+                        Promedio Global
+                    </div>
+                </div>
+                <div class="relative h-48 w-full mt-4 flex flex-col">
+                    <svg class="w-full h-full overflow-visible" preserveAspectRatio="none" viewBox="0 0 500 100">
+                        <defs>
+                            <linearGradient id="lineGrad" x1="0%" x2="0%" y1="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:0.2"></stop>
+                                <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:0"></stop>
+                            </linearGradient>
+                        </defs>
+                        <line stroke="#f1f5f9" stroke-width="1" x1="0" x2="500" y1="20" y2="20"></line>
+                        <line stroke="#f1f5f9" stroke-width="1" x1="0" x2="500" y1="40" y2="40"></line>
+                        <line stroke="#f1f5f9" stroke-width="1" x1="0" x2="500" y1="60" y2="60"></line>
+                        <line stroke="#f1f5f9" stroke-width="1" x1="0" x2="500" y1="80" y2="80"></line>
+                        <path d="M0,75 L100,68 L200,80 L300,60 L400,55 L500,45 V100 H0 Z" fill="url(#lineGrad)"></path>
+                        <path d="M0,75 L100,68 L200,80 L300,60 L400,55 L500,45" fill="none" stroke="#4f46e5"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                        <circle cx="0" cy="75" fill="#4f46e5" r="4"></circle>
+                        <circle cx="100" cy="68" fill="#4f46e5" r="4"></circle>
+                        <circle cx="200" cy="80" fill="#4f46e5" r="4"></circle>
+                        <circle cx="300" cy="60" fill="#4f46e5" r="4"></circle>
+                        <circle cx="400" cy="55" fill="#4f46e5" r="4"></circle>
+                        <circle cx="500" cy="45" fill="#4f46e5" r="4"></circle>
+                    </svg>
+                    <div
+                        class="flex justify-between mt-6 text-[10px] text-slate-400 font-bold uppercase tracking-widest">
+                        <span>S1 2022</span>
+                        <span>S2 2022</span>
+                        <span>S1 2023</span>
+                        <span>S2 2023</span>
+                        <span>S1 2024</span>
+                        <span>S2 2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm lg:col-span-1">
+                <h4 class="font-bold text-slate-900 mb-6">Carreras con mayor promedio</h4>
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between text-xs mb-2">
+                            <span class="text-slate-600 font-medium">Ing. Industrial</span>
+                            <span class="font-bold text-slate-900">8.9</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-8 rounded-lg overflow-hidden flex items-center">
+                            <div class="bg-indigo-500/80 h-full rounded-r-sm" style="width: 89%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs mb-2">
+                            <span class="text-slate-600 font-medium">Ing. Computación</span>
+                            <span class="font-bold text-slate-900">8.5</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-8 rounded-lg overflow-hidden flex items-center">
+                            <div class="bg-indigo-500/60 h-full rounded-r-sm" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs mb-2">
+                            <span class="text-slate-600 font-medium">Ing. Civil</span>
+                            <span class="font-bold text-slate-900">7.8</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-8 rounded-lg overflow-hidden flex items-center">
+                            <div class="bg-indigo-500/40 h-full rounded-r-sm" style="width: 78%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs mb-2">
+                            <span class="text-slate-600 font-medium">Ing. Mecánica</span>
+                            <span class="font-bold text-slate-900">7.4</span>
+                        </div>
+                        <div class="w-full bg-slate-100 h-8 rounded-lg overflow-hidden flex items-center">
+                            <div class="bg-indigo-500/20 h-full rounded-r-sm" style="width: 74%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-white rounded-xl border border-slate-200 shadow-sm lg:col-span-2 overflow-hidden flex flex-col">
+                <div class="p-6 border-b border-slate-100 flex justify-between items-center">
+                    <div>
+                        <h4 class="font-bold text-slate-900">Alumnos en Riesgo</h4>
+                        <p class="text-xs text-slate-500">Listado de alumnos con promedio &lt; 6.0</p>
+                    </div>
+                    <span
+                        class="px-2 py-1 bg-accent-red text-red-600 text-[10px] font-bold rounded uppercase tracking-wider">Acción
+                        Crítica</span>
+                </div>
+                <div class="overflow-x-auto max-h-96 overflow-y-auto">
+                    <table class="w-full text-left">
+                        <thead class="bg-slate-50 text-slate-500 text-[10px] font-bold uppercase tracking-wider">
+                            <tr>
+                                <th class="px-6 py-4">ID Estudiante</th>
+                                <th class="px-6 py-4">Carrera</th>
+                                <th class="px-6 py-4">Materia</th>
+                                <th class="px-6 py-4 text-center">Calificación</th>
+                                <th class="px-6 py-4 text-right">Estatus</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="px-6 py-4 text-sm font-semibold text-slate-900">#10</td>
+                                <td class="px-6 py-4 text-sm text-slate-600">Ing. en Computación</td>
+                                <td class="px-6 py-4 text-sm text-slate-600">Programación</td>
+                                <td class="px-6 py-4 text-center"><span
+                                        class="text-sm font-bold text-red-600">5.5</span></td>
+                                <td class="px-6 py-4 text-right"><span
+                                        class="px-2 py-0.5 rounded-full bg-red-100 text-red-700 text-[10px] font-bold">ALERTA</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="px-6 py-4 text-sm font-semibold text-slate-900">#22</td>
+                                <td class="px-6 py-4 text-sm text-slate-600">Ing. Mecánica</td>
+                                <td class="px-6 py-4 text-sm text-slate-600">Estadística</td>
+                                <td class="px-6 py-4 text-center"><span
+                                        class="text-sm font-bold text-red-600">5.0</span></td>
+                                <td class="px-6 py-4 text-right"><span
+                                        class="px-2 py-0.5 rounded-full bg-red-100 text-red-700 text-[10px] font-bold">ALERTA</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="px-6 py-4 text-sm font-semibold text-slate-900">#26</td>
+                                <td class="px-6 py-4 text-sm text-slate-600">Ing. en Computación</td>
+                                <td class="px-6 py-4 text-sm text-slate-600">Algoritmos</td>
+                                <td class="px-6 py-4 text-center"><span
+                                        class="text-sm font-bold text-red-600">5.0</span></td>
+                                <td class="px-6 py-4 text-right"><span
+                                        class="px-2 py-0.5 rounded-full bg-red-100 text-red-700 text-[10px] font-bold">ALERTA</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="px-6 py-4 text-sm font-semibold text-slate-900">#31</td>
+                                <td class="px-6 py-4 text-sm text-slate-600">Ing. Civil</td>
+                                <td class="px-6 py-4 text-sm text-slate-600">Estructuras</td>
+                                <td class="px-6 py-4 text-center"><span
+                                        class="text-sm font-bold text-red-600">5.3</span></td>
+                                <td class="px-6 py-4 text-right"><span
+                                        class="px-2 py-0.5 rounded-full bg-red-100 text-red-700 text-[10px] font-bold">ALERTA</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="px-6 py-4 text-sm font-semibold text-slate-900">#18</td>
+                                <td class="px-6 py-4 text-sm text-slate-600">Ing. Civil</td>
+                                <td class="px-6 py-4 text-sm text-slate-600">Estadística</td>
+                                <td class="px-6 py-4 text-center"><span
+                                        class="text-sm font-bold text-red-600">5.8</span></td>
+                                <td class="px-6 py-4 text-right"><span
+                                        class="px-2 py-0.5 rounded-full bg-red-100 text-red-700 text-[10px] font-bold">ALERTA</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="p-4 bg-slate-50 border-t border-slate-100 text-center">
+                    <button class="text-xs font-bold text-primary hover:underline">Ver todos los casos de
+                        riesgo</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<script src="app.js"></script>
+</body>
+
+</html>

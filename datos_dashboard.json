@@ -1,0 +1,407 @@
+{
+    "kpis": {
+        "promedio_general": 7.62,
+        "tasa_reprobacion": 14.5,
+        "alumnos_en_riesgo": 29
+    },
+    "materias_reprobacion": [
+        {
+            "materia": "Algoritmos",
+            "tasa_reprobacion": 21.74
+        },
+        {
+            "materia": "Física",
+            "tasa_reprobacion": 17.14
+        },
+        {
+            "materia": "Estadística",
+            "tasa_reprobacion": 16.67
+        },
+        {
+            "materia": "Base de Datos",
+            "tasa_reprobacion": 16.13
+        },
+        {
+            "materia": "Cálculo",
+            "tasa_reprobacion": 8.82
+        },
+        {
+            "materia": "Programación",
+            "tasa_reprobacion": 8.57
+        }
+    ],
+    "carreras_promedio": [
+        {
+            "carrera": "Ingeniería Civil",
+            "promedio": 7.77
+        },
+        {
+            "carrera": "Ingeniería Industrial",
+            "promedio": 7.76
+        },
+        {
+            "carrera": "Ingeniería en Computación",
+            "promedio": 7.48
+        },
+        {
+            "carrera": "Ingeniería Mecánica",
+            "promedio": 7.38
+        }
+    ],
+    "tendencias_semestre": [
+        {
+            "año": 2022,
+            "semestre": 1,
+            "promedio": 6.86
+        },
+        {
+            "año": 2022,
+            "semestre": 2,
+            "promedio": 6.4
+        },
+        {
+            "año": 2022,
+            "semestre": 3,
+            "promedio": 8.39
+        },
+        {
+            "año": 2022,
+            "semestre": 4,
+            "promedio": 6.89
+        },
+        {
+            "año": 2022,
+            "semestre": 5,
+            "promedio": 8.13
+        },
+        {
+            "año": 2022,
+            "semestre": 6,
+            "promedio": 6.33
+        },
+        {
+            "año": 2022,
+            "semestre": 7,
+            "promedio": 7.68
+        },
+        {
+            "año": 2022,
+            "semestre": 8,
+            "promedio": 8.03
+        },
+        {
+            "año": 2023,
+            "semestre": 1,
+            "promedio": 8.42
+        },
+        {
+            "año": 2023,
+            "semestre": 2,
+            "promedio": 7.44
+        },
+        {
+            "año": 2023,
+            "semestre": 3,
+            "promedio": 7.45
+        },
+        {
+            "año": 2023,
+            "semestre": 4,
+            "promedio": 7.06
+        },
+        {
+            "año": 2023,
+            "semestre": 5,
+            "promedio": 8.37
+        },
+        {
+            "año": 2023,
+            "semestre": 6,
+            "promedio": 7.9
+        },
+        {
+            "año": 2023,
+            "semestre": 7,
+            "promedio": 7.66
+        },
+        {
+            "año": 2023,
+            "semestre": 8,
+            "promedio": 6.98
+        },
+        {
+            "año": 2024,
+            "semestre": 1,
+            "promedio": 8.22
+        },
+        {
+            "año": 2024,
+            "semestre": 2,
+            "promedio": 6.43
+        },
+        {
+            "año": 2024,
+            "semestre": 3,
+            "promedio": 8.18
+        },
+        {
+            "año": 2024,
+            "semestre": 4,
+            "promedio": 7.55
+        },
+        {
+            "año": 2024,
+            "semestre": 5,
+            "promedio": 7.04
+        },
+        {
+            "año": 2024,
+            "semestre": 6,
+            "promedio": 7.99
+        },
+        {
+            "año": 2024,
+            "semestre": 7,
+            "promedio": 7.65
+        },
+        {
+            "año": 2024,
+            "semestre": 8,
+            "promedio": 8.4
+        }
+    ],
+    "alumnos_riesgo": [
+        {
+            "id_estudiante": 10,
+            "carrera": "Ingeniería en Computación",
+            "materia": "Programación",
+            "calificacion": 5.5,
+            "semestre": 6,
+            "año": 2022
+        },
+        {
+            "id_estudiante": 18,
+            "carrera": "Ingeniería Civil",
+            "materia": "Estadística",
+            "calificacion": 5.8,
+            "semestre": 7,
+            "año": 2023
+        },
+        {
+            "id_estudiante": 22,
+            "carrera": "Ingeniería Mecánica",
+            "materia": "Estadística",
+            "calificacion": 5.0,
+            "semestre": 5,
+            "año": 2024
+        },
+        {
+            "id_estudiante": 26,
+            "carrera": "Ingeniería en Computación",
+            "materia": "Algoritmos",
+            "calificacion": 5.0,
+            "semestre": 6,
+            "año": 2022
+        },
+        {
+            "id_estudiante": 31,
+            "carrera": "Ingeniería Civil",
+            "materia": "Base de Datos",
+            "calificacion": 5.3,
+            "semestre": 8,
+            "año": 2023
+        },
+        {
+            "id_estudiante": 38,
+            "carrera": "Ingeniería Civil",
+            "materia": "Algoritmos",
+            "calificacion": 5.5,
+            "semestre": 6,
+            "año": 2022
+        },
+        {
+            "id_estudiante": 41,
+            "carrera": "Ingeniería Mecánica",
+            "materia": "Base de Datos",
+            "calificacion": 5.8,
+            "semestre": 5,
+            "año": 2024
+        },
+        {
+            "id_estudiante": 49,
+            "carrera": "Ingeniería Mecánica",
+            "materia": "Cálculo",
+            "calificacion": 5.7,
+            "semestre": 3,
+            "año": 2022
+        },
+        {
+            "id_estudiante": 55,
+            "carrera": "Ingeniería Civil",
+            "materia": "Física",
+            "calificacion": 5.4,
+            "semestre": 6,
+            "año": 2022
+        },
+        {
+            "id_estudiante": 61,
+            "carrera": "Ingeniería Mecánica",
+            "materia": "Cálculo",
+            "calificacion": 5.0,
+            "semestre": 1,
+            "año": 2022
+        },
+        {
+            "id_estudiante": 65,
+            "carrera": "Ingeniería Civil",
+            "materia": "Programación",
+            "calificacion": 5.1,
+            "semestre": 6,
+            "año": 2024
+        },
+        {
+            "id_estudiante": 75,
+            "carrera": "Ingeniería Industrial",
+            "materia": "Base de Datos",
+            "calificacion": 5.9,
+            "semestre": 3,
+            "año": 2023
+        },
+        {
+            "id_estudiante": 86,
+            "carrera": "Ingeniería en Computación",
+            "materia": "Base de Datos",
+            "calificacion": 5.7,
+            "semestre": 2,
+            "año": 2022
+        },
+        {
+            "id_estudiante": 88,
+            "carrera": "Ingeniería Industrial",
+            "materia": "Estadística",
+            "calificacion": 5.7,
+            "semestre": 4,
+            "año": 2024
+        },
+        {
+            "id_estudiante": 99,
+            "carrera": "Ingeniería en Computación",
+            "materia": "Física",
+            "calificacion": 5.3,
+            "semestre": 4,
+            "año": 2022
+        },
+        {
+            "id_estudiante": 104,
+            "carrera": "Ingeniería en Computación",
+            "materia": "Programación",
+            "calificacion": 5.5,
+            "semestre": 2,
+            "año": 2024
+        },
+        {
+            "id_estudiante": 120,
+            "carrera": "Ingeniería Industrial",
+            "materia": "Base de Datos",
+            "calificacion": 5.9,
+            "semestre": 1,
+            "año": 2022
+        },
+        {
+            "id_estudiante": 125,
+            "carrera": "Ingeniería Industrial",
+            "materia": "Física",
+            "calificacion": 5.5,
+            "semestre": 3,
+            "año": 2023
+        },
+        {
+            "id_estudiante": 127,
+            "carrera": "Ingeniería en Computación",
+            "materia": "Física",
+            "calificacion": 5.3,
+            "semestre": 6,
+            "año": 2022
+        },
+        {
+            "id_estudiante": 133,
+            "carrera": "Ingeniería Civil",
+            "materia": "Cálculo",
+            "calificacion": 5.2,
+            "semestre": 5,
+            "año": 2024
+        },
+        {
+            "id_estudiante": 141,
+            "carrera": "Ingeniería Mecánica",
+            "materia": "Algoritmos",
+            "calificacion": 5.2,
+            "semestre": 2,
+            "año": 2024
+        },
+        {
+            "id_estudiante": 145,
+            "carrera": "Ingeniería Mecánica",
+            "materia": "Física",
+            "calificacion": 5.8,
+            "semestre": 7,
+            "año": 2022
+        },
+        {
+            "id_estudiante": 148,
+            "carrera": "Ingeniería Civil",
+            "materia": "Estadística",
+            "calificacion": 5.1,
+            "semestre": 8,
+            "año": 2023
+        },
+        {
+            "id_estudiante": 156,
+            "carrera": "Ingeniería Civil",
+            "materia": "Estadística",
+            "calificacion": 5.6,
+            "semestre": 2,
+            "año": 2024
+        },
+        {
+            "id_estudiante": 160,
+            "carrera": "Ingeniería Industrial",
+            "materia": "Estadística",
+            "calificacion": 5.7,
+            "semestre": 7,
+            "año": 2024
+        },
+        {
+            "id_estudiante": 168,
+            "carrera": "Ingeniería en Computación",
+            "materia": "Física",
+            "calificacion": 5.5,
+            "semestre": 4,
+            "año": 2024
+        },
+        {
+            "id_estudiante": 170,
+            "carrera": "Ingeniería Mecánica",
+            "materia": "Algoritmos",
+            "calificacion": 5.3,
+            "semestre": 1,
+            "año": 2022
+        },
+        {
+            "id_estudiante": 191,
+            "carrera": "Ingeniería Industrial",
+            "materia": "Estadística",
+            "calificacion": 5.5,
+            "semestre": 3,
+            "año": 2022
+        },
+        {
+            "id_estudiante": 194,
+            "carrera": "Ingeniería Civil",
+            "materia": "Algoritmos",
+            "calificacion": 5.8,
+            "semestre": 4,
+            "año": 2022
+        }
+    ]
+}
