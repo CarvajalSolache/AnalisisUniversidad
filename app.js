@@ -74,7 +74,7 @@ function actualizarTablaRiesgo(alumnos) {
             </tr>
         `;
     });
-
+}
 
 function exportarCSV() {
     // Seleccionamos todas las filas del tbody
@@ -116,6 +116,6 @@ function exportarCSV() {
 
 // Conectamos con el botón
 document.getElementById("btnExport").addEventListener("click", exportarCSV);
-}
+
 
 cargarDashboard();
