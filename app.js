@@ -74,6 +74,48 @@ function actualizarTablaRiesgo(alumnos) {
             </tr>
         `;
     });
+
+
+function exportarCSV() {
+    // Seleccionamos todas las filas del tbody
+    const filas = document.querySelectorAll("tbody tr");
+    
+    // Encabezados del CSV
+    const datos = [["id_estudiante","carrera","materia","calificacion","semestre","año"]];
+
+    // Recorremos cada fila de la tabla
+    filas.forEach(fila => {
+        const columnas = fila.querySelectorAll("td");
+        // Extraemos los datos visibles
+        const id = columnas[0].textContent.replace("#","").trim(); // quitamos #
+        const carrera = columnas[1].textContent.trim();
+        const materia = columnas[2].textContent.trim();
+        const calificacion = columnas[3].textContent.trim();
+
+        // Semestre y año: si no están en la tabla, puedes asignar valores por defecto
+        const semestre = "1"; // o extraerlo de tu JSON si lo tienes
+        const año = "2024";   // o extraer dinámicamente
+
+        datos.push([id, carrera, materia, calificacion, semestre, año]);
+    });
+
+    // Convertimos a CSV
+    const csvContent = datos.map(e => e.join(",")).join("\n");
+
+    // Creamos enlace para descargar
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.setAttribute("href", url);
+    link.setAttribute("download", "alumnos_riesgo.csv");
+    link.style.display = "none";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+// Conectamos con el botón
+document.getElementById("btnExport").addEventListener("click", exportarCSV);
 }
 
 cargarDashboard();
